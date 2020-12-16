@@ -1,5 +1,5 @@
 # DeepMM
-Full-length protein structure determination from cryo-EM maps using deep learning
+Full-length protein structure determination from cryo-EM maps using deep learning.
 Copyright (C) 2020 Jiahua He
 
 MAINMAST algorithm (http://kiharalab.org/mainmast/) was used in DeepMM under GNU General Public License version 3

@@ -45,9 +45,10 @@ In order to run python scripts properly, users should set the python path using 
         2. running the scripts with the full python path like this:
 
                 /home/jhe/data/anaconda3/envs/pth/bin/python ../mrc2situs.py -m predMC.mrc -s predMC.situs
+                
+----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------
 Scripts or programs used for model building:
 
 mrc2situs.py: Convert a .mrc map file to a .situs map file.
@@ -60,9 +61,10 @@ trace: Trace main-chain paths using Tabu-search.
 align: Align sequence to main-chain paths.
 ctrip: Build full-atom structure from C-alpha model.
 modelrefine.sh: Refine full-atom structure using Amber.
-----------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
 Example A:
 EMD-5185: Tobacco Mosaic Virus determined at a resolution of 3.3 angstroms; associated with chain A (length: 155) of PDB entry 3J06. The authors of this EM map recommended a contour level of 6.42.
 
@@ -72,12 +74,9 @@ Required files
         "seq.fasta": protein sequence of the chain A of 3J06.
         "seq.fasta.spd3": protein secondary structure predicted by SPIDER2 from the sequence of chain A of 3J06.
 
-Change directory
-
-        cd 5185/
-
 Step 1. Generate the voxels of size 11x11x11 on grid points with density value greater than than 3.21 (half of the recommended contour level of EMD-5185) to "map.npz" from the map file "5185_zoned.mrc".
 
+        cd 5185/
         ../preprocess.py -m 5185_zoned.mrc -n map.npz -t 3.21
 
 Step 2. Predict main-chain and C-alpha probabilities for voxels in "map.npz". The main-chain probability map and C-alpha probability map are written to "predMC.mrc" and "predCA.mrc", respectively.
@@ -122,12 +121,9 @@ Required files
         "seq.fasta": protein sequence of the chain A of 6DW1.
         "seq.fasta.spd3": protein secondary structure predicted by SPIDER2 from the sequence of chain A of 6DW1.
 
-Change directory
-
-        cd 6dw1_A/
-
 Step 1. Generate voxels of size 11x11x11 on grid points with density value greater than than 3.84 (half of the recommended contour level of EMD-8923) to "map.npz" from map file "6dw1.A.mrc".
 
+        cd 6dw1_A/
         ../preprocess.py -m 6dw1.A.mrc -n map.npz -t 3.84
 
 Step 2. Predict main-chain and C-alpha probabilities for voxels in "map.npz". The main-chain probability map and C-alpha probability map are written to "predMC.mrc" and "predCA.mrc", respectively.
@@ -160,9 +156,10 @@ Step 8. Align C-alpha sequence to main-chain paths "paths.pdb" and rank them acc
 
         ../align paths.pdb seq.fasta.spd3
         ../align paths.pdb seq.fasta.spd3 -imd
+        
+----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------
 Build and refine full-atom structure:
 
 The output models from the alignemnt step contain only C-alpha atoms. Thus, the final step of DeepMM is to build and refine the full-atom structures for predicted C-alpha models. For example,

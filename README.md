@@ -56,7 +56,7 @@ Scripts or programs used for model building:
 2.      preprocess.py
                 Generate voxels in .npz format from given .mrc file.
 
-3       pred_MCCA.py
+3.      pred_MCCA.py
                 Predict main-chain and C-alpha probabilities for voxels.
 
 4.      getldp

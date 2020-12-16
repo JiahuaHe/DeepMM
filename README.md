@@ -50,36 +50,16 @@ In order to run python scripts properly, users should set the python path using 
 ----------------------------------------------------------------------------------------------------
 Scripts or programs used for model building:
 
-1.      mrc2situs.py
-                Convert a .mrc map file to a .situs map file.
-
-2.      preprocess.py
-                Generate voxels in .npz format from given .mrc file.
-
-3.      pred_MCCA.py
-                Predict main-chain and C-alpha probabilities for voxels.
-
-4.      getldp
-                Generate LDPs in main-chain probability map.
-
-5.      getvox
-                Generate voxels on LDPs.
-
-6.      pred_AASS.py
-                Predict amino acid and secondary structure types for LDPs.
-
-7.      trace
-                Trace main-chain paths using Tabu-search.
-
-8.      align
-                Align sequence to main-chain paths.
-
-9.      ctrip
-                Build full-atom structure from C-alpha model.
-
-10.     modelrefine.sh
-                Refine full-atom structure using Amber.
-
+mrc2situs.py: Convert a .mrc map file to a .situs map file.
+preprocess.py: Generate voxels in .npz format from given .mrc file.
+pred_MCCA.py: Predict main-chain and C-alpha probabilities for voxels.
+getldp: Generate LDPs in main-chain probability map.
+getvox: Generate voxels on LDPs.
+pred_AASS.py: Predict amino acid and secondary structure types for LDPs.
+trace: Trace main-chain paths using Tabu-search.
+align: Align sequence to main-chain paths.
+ctrip: Build full-atom structure from C-alpha model.
+modelrefine.sh: Refine full-atom structure using Amber.
 ----------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------

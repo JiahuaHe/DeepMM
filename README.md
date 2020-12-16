@@ -1,11 +1,11 @@
-# DeepMM
+## DeepMM
 Full-length protein structure determination from cryo-EM maps using deep learning.
 Copyright (C) 2020 Jiahua He
 
 MAINMAST algorithm (http://kiharalab.org/mainmast/) was used in DeepMM under GNU General Public License version 3
 Copyright (C) 2017 Genki Terashi, Daisuke Kihara and Purdue University
 
-Installation:
+#Installation
 Compile from source codes with ifort or gfortran
 
         cd src/
@@ -14,14 +14,14 @@ Compile from source codes with ifort or gfortran
         ifort trace.f -o ../trace -heap-arrays -mcmodel=medium
         ifort align.f -o ../align -heap-arrays -mcmodel=medium
 
-Software requirements:
+#Software requirements
 
         Python  (https://www.python.org) (ver. 3.7)
         SPIDER2 (https://sparks-lab.org) for predicting secondary structure for a target sequence
         ctrip   (http://honig.c2b2.columbia.edu/jackal) from the Jackal package for building full-atom protein structures
         Amber14 (http://ambermd.org) for refining full-atom protein structures
 
-Python package requirements:
+#Python package requirements
 
         pytorch (https://pytorch.org) (ver. 1.2 or later)
         mrcfile (https://github.com/ccpem/mrcfile)
@@ -42,7 +42,7 @@ In order to run python scripts properly, users should set the python path using 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
-Scripts or programs used for model building:
+#Scripts or programs used for model building:
 
         mrc2situs.py: Convert a .mrc map file to a .situs map file.  
         preprocess.py: Generate voxels in .npz format from given .mrc file.  
@@ -57,6 +57,7 @@ Scripts or programs used for model building:
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
+#Examples
 
 Example A:
 EMD-5185: Tobacco Mosaic Virus determined at a resolution of 3.3 angstroms; associated with chain A (length: 155) of PDB entry 3J06. The authors of this EM map recommended a contour level of 6.42.

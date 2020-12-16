@@ -32,15 +32,12 @@ In order to run python scripts properly, users should set the python path using 
 
 1. adding python path to the header of each python script like this:
 
-                "#!/home/jhe/data/anaconda3/envs/pth/bin/python"
+        "#!/home/jhe/data/anaconda3/envs/pth/bin/python"
 
 2. running the scripts with the full python path like this:
 
-                /home/jhe/data/anaconda3/envs/pth/bin/python ../mrc2situs.py -m predMC.mrc -s predMC.situs
+        /home/jhe/data/anaconda3/envs/pth/bin/python ../mrc2situs.py -m predMC.mrc -s predMC.situs
                 
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
-
 # Scripts or programs used for model building
 
         mrc2situs.py: Convert a .mrc map file to a .situs map file.  
@@ -54,8 +51,6 @@ In order to run python scripts properly, users should set the python path using 
         ctrip: Build full-atom structure from C-alpha model.  
         modelrefine.sh: Refine full-atom structure using Amber.  
 
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
 # Examples  
 Example A:
 EMD-5185: Tobacco Mosaic Virus determined at a resolution of 3.3 angstroms; associated with chain A (length: 155) of PDB entry 3J06. The authors of this EM map recommended a contour level of 6.42.
@@ -101,9 +96,7 @@ Step 8. Align C-alpha sequence to main-chain paths "paths.pdb" and rank them acc
 
         ../align paths.pdb seq.fasta.spd3
         ../align paths.pdb seq.fasta.spd3 -imd
-----------------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------------------
 Example B:
 EMD-8923: Cryo-EM structure of the benzodiazepine-sensitive alpha1beta1gamma2S tri-heteromeric GABAA receptor in complex with GABA (ECD map) at a resolution of 3.1 angstroms; associated with chain A (length: 210) of PDB entry 6DW1. The authors of this EM map recommended a contour level of 7.68.
 
@@ -148,9 +141,6 @@ Step 8. Align C-alpha sequence to main-chain paths "paths.pdb" and rank them acc
 
         ../align paths.pdb seq.fasta.spd3
         ../align paths.pdb seq.fasta.spd3 -imd
-        
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
 
 Build and refine full-atom structure:
 

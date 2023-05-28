@@ -27,6 +27,13 @@ Compile from source codes with ifort or gfortran
         numpy   (https://www.numpy.org)
         pandas  (https://pandas.pydata.org)
         tqdm    (https://github.com/tqdm/tqdm)
+        
+The interpolation program "interp3d.f90" should be built as a python package 'interp3d' through f2py.
+
+        f2py -c interp3d.f90 -m interp3d
+            
+This command will generate an ELF file with name like "interp3d.cpython-*.so". Please keep "interp3d.cpython-*.so" with all python scripts "*.py" in the same directory.
+        
 
 In order to run python scripts properly, users should set the python path using one of the following ways.
 
